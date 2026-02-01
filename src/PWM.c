@@ -13,11 +13,9 @@ void PWMInit(void)
   OCR3CL = 0;
 }
 
-void PWMChange(Encoder_t* encPtr)
+void PWMChange(RGBLed_t* ledPtr)
 {
-  uint8_t value = encPtr->position;
-
-  OCR3AL = value;
-  OCR3BL = 255-value;
-  OCR3CL = 255-value;
+  OCR3AL = ledPtr->b;
+  OCR3BL = ledPtr->g;
+  OCR3CL = ledPtr->r;
 }

@@ -2,9 +2,9 @@
 #define PWM_H_
 
 #include "common.h"
-#include "encoder.h"
+#include "rgbLed.h"
 
 void PWMInit(void);
-void PWMChange(Encoder_t* encPtr);
+void PWMChange(RGBLed_t* ledPtr);
 
 #endif
