@@ -4,6 +4,6 @@
 #include "common.h"
 
 void adcInit(void);
-uint16_t adcRead(void);
+void adcStart(void);
 
 #endif
