@@ -14,7 +14,10 @@ int main(void)
 
   while(1)
   {
-    
+    led.g = 1023-adcRead();
+    led.b = led.g;
+    sevenSegmentWrite(led.g);
+    PWMChange(&led);
   }
 
 }
@@ -24,6 +27,7 @@ void allInit(void)
   adcInit();
   PWMInit();
   rgbLedInit();
+  sevenSegmentInit();
 
   sei();
 }
